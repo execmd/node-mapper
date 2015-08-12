@@ -1,0 +1,33 @@
+{
+  "name": "node-mapper",
+  "version": "1.0.0",
+  "description": "NodeJS library for dot notation mapping",
+  "main": "mapper.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/execmd/node-mapper.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "js",
+    "javascript",
+    "object",
+    "mapper",
+    "mapping",
+    "dot",
+    "notation"
+  ],
+  "author": "execmd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/execmd/node-mapper/issues"
+  },
+  "homepage": "https://github.com/execmd/node-mapper#readme"
+}
