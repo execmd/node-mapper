@@ -223,3 +223,46 @@ describe('Array mapping', function () {
         assert.equal(typeof mapper('key[0].data', object), 'undefined', 'Mapper returned right value');
     });
 });
+
+describe('Object mapping', function () {
+    it('#simple object', function () {
+        var object = {
+            items: [
+                {
+                    id: 1,
+                    datas: [
+                        {
+                            title: 'TITLE 1'
+                        },
+                        {
+                            title: 'TITLE 2'
+                        },
+                        {
+                            title: 'TITLE 3'
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    datas: [
+                        {
+                            title: 'TITLE 4'
+                        },
+                        {
+                            title: 'TITLE 5'
+                        }
+                    ]
+                }
+            ]
+        };
+
+        assert.deepEqual(
+                mapper({'a.b.c': 'items[0].datas[1].title',
+                    'a.b.d': 'items[0].datas[2].title',
+                    'a.e': 'items[1].datas[0].title'}, object)
+                , {a: {b: {c: 'TITLE 2', d: 'TITLE 3'}, e: 'TITLE 4'}}
+                , 'Mapper returned right value');
+    });
+});
+
+
