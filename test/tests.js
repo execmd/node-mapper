@@ -1,7 +1,7 @@
 var mapper = require('../mapper.js'),
     assert = require('assert');
 
-describe('String map', function () {
+describe('String mapping', function () {
     it('#simple', function () {
         var object = {
             key: {
