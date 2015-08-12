@@ -1,15 +1,36 @@
-# node-mapper[![Build Status](https://travis-ci.org/execmd/node-mapper.svg)](https://travis-ci.org/execmd/node-mapper)
+# node-mapper [![Build Status](https://travis-ci.org/execmd/node-mapper.svg)](https://travis-ci.org/execmd/node-mapper)
 NodeJS library for dot notation mapping
 
+# Install
+```bash
+npm install --save node-mapper
+```
+
+# How to use
+Just require as any other module
+```js
+var mapper = require('node-mapper');
+```
+and use
+```js
+mapper(mapIn, objectIn[, objectOut)
+```
+where
+ - mapIn - string, array or object
+ - objectIn - object where we will perform lookup
+ - objectOut - optional object which will be extended on object mappings
+ 
+any examples you can find below
+
 # TOC
-   - [String map](#string-map)
+   - [String mapping](#string-mapping)
    - [Array mapping](#array-mapping)
    - [Object mapping](#object-mapping)
 <a name=""></a>
  
-<a name="string-map"></a>
-# String map
-#simple.
+<a name="string-mapping"></a>
+# String mapping
+#simple
 
 ```js
 var object = {
@@ -20,7 +41,7 @@ var object = {
 assert.equal(mapper('key.data', object), 'value', 'Mapper returned right value');
 ```
 
-#with array.
+#with array
 
 ```js
 var object = [
@@ -37,7 +58,7 @@ var object = [
 assert.equal(mapper('[1].id', object), 'ID 2', 'Mapper returned right value');
 ```
 
-#with array 2.
+#with array 2
 
 ```js
 var object = [
@@ -55,7 +76,7 @@ assert.deepEqual(mapper('id', object), ['ID 1', 'ID 2', 'ID 3']
     , 'Mapper returned right value');
 ```
 
-#with array 3.
+#with array 3
 
 ```js
 var object = {
@@ -92,7 +113,7 @@ assert.deepEqual(mapper('items.datas[0].title', object)
     , 'Mapper returned right value');
 ```
 
-#with multiple arrays.
+#with multiple arrays
 
 ```js
 var object = [
@@ -173,7 +194,7 @@ assert.deepEqual(mapper('user.posts.title', object)
         , 'Mapper returned right value');
 ```
 
-#invalid path.
+#invalid path
 
 ```js
 var object = {
@@ -186,7 +207,7 @@ assert.equal(typeof mapper('key.data2', object), 'undefined', 'Mapper returned r
 
 <a name="array-mapping"></a>
 # Array mapping
-#return array.
+#return array
 
 ```js
 var object = {
@@ -225,7 +246,7 @@ assert.deepEqual(
         , 'Mapper returned right value');
 ```
 
-#trying to get index of non array.
+#trying to get index of non array
 
 ```js
 var object = {
@@ -238,7 +259,7 @@ assert.equal(typeof mapper('key[0].data', object), 'undefined', 'Mapper returned
 
 <a name="object-mapping"></a>
 # Object mapping
-#simple object.
+#simple object
 
 ```js
 var object = {
