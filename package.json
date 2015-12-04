@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/execmd/node-mapper/issues"
   },
+  "devDependencies": {
+    "mocha": "latest"
+  },
   "homepage": "https://github.com/execmd/node-mapper#readme"
 }
