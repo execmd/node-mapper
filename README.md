@@ -1,4 +1,4 @@
-# node-mapper [![Build Status](https://travis-ci.org/execmd/node-mapper.svg)](https://travis-ci.org/execmd/node-mapper)
+# node-mapper [![Build Status](https://travis-ci.org/execmd/node-mapper.svg)](https://travis-ci.org/execmd/node-mapper)[![Build Status](https://semaphoreci.com/api/v1/projects/57685ca6-b52b-438f-972a-4e1829d2898e/624351/badge.svg)](https://semaphoreci.com/execmd/node-mapper)[![Build Status](https://magnum-ci.com/status/6838515276900fd8242d184e4eb9ab4c.png)](https://magnum-ci.com/projects/3714)
 NodeJS library for dot notation mapping
 
 # Install
